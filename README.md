@@ -1,14 +1,16 @@
 ## Using Composition for "has a" Relationships
 
-In the previous chapter, we used inheritance "is a" relationships and explored the use of modules and their subclasses.
+In the previous chapter, we used inheritance for "is a" relationships and explored the use of modules and their subclasses.
 
 Here, we explore another paradigm for structuring our code.
+
+Examples in Ironboard: course.rb
 
 ### 8.1 Composing a Bicycle of Parts (Read: More Bikes!)
 
 To get us started down the path of composition, Sandi reused the `Bicycle` heirarchy by abstracting its parts into its own class and having each type of bike inherit from the `Parts` class with their own parts class (`MountainBikeParts`, `RoadBikeParts`).
 
-Before we dive in further, how does the concept of composition feel so far? Have you used it previously or do you wish to use it more?
+Before we dive in further, how does the concept of composition feel so far? Have you used it previously or do you wish you used it more?
 
 ### 8.2 Composing the Parts Object
 
@@ -42,7 +44,7 @@ With composition, method delegation doesn’t come for free like with inheritanc
 
 ##### Pros:
 
-- Covers RUE of our goal to be TRUE: reasonable, usable and exemplary
+- Covers RUE part of our goal to be TRUE: reasonable, usable and exemplary
 - Methods defined near the top of the heirarchy are spread easily over everything underneath making changes to behavior relatively easy and reasonable
 - Adding a new subclass doesn't require making a change to existing code thus making it usable
 - These classes are easily extendible setting an easy pattern to follow. This puts the e in exemplary.
@@ -59,7 +61,7 @@ irrevocably and by design, to the classes above them in the hierarchy." - pg. 18
 
 ##### Pros:
 
-- Covers the TRU of our goal to be TRUE: true, reasonable and usable.
+- Covers the TRU part of our goal to be TRUE: true, reasonable and usable.
 - Easy to understand (transparent)
 - Adding objects is easy as long asthey honor the given interface (reasonable)
 - Interchangeable components with "...a high tolerance for change." (usuable) - pg 188
