@@ -1,18 +1,20 @@
 ## Using Composition for "has a" Relationships
 
-In the previous chapter, we used inheritance "is a" relationships and explored the use of modules and their subclasses.
+In the previous chapter, we used inheritance for "is a" relationships and explored the use of modules and their subclasses.
 
 Here, we explore another paradigm for structuring our code.
+
+Examples in Ironboard: course.rb
 
 ### 8.1 Composing a Bicycle of Parts (Read: More Bikes!)
 
 To get us started down the path of composition, Sandi reused the `Bicycle` heirarchy by abstracting its parts into its own class and having each type of bike inherit from the `Parts` class with their own parts class (`MountainBikeParts`, `RoadBikeParts`).
 
-Before we dive in further, how does the concept of composition feel so far? Have you used it previously or do you wish to use it more?
+Before we dive in further, how does the concept of composition feel so far? Have you used it previously or do you wish you used it more?
 
 ### 8.2 Composing the Parts Object
 
-The way you name your classes is important. To prevent communication problems, Sandi named the new class `Parts` which will be the parent of `Part`. `Parts` is now a wrapper that contains an array of `Part` objects.
+How you name your classes is important. To prevent communication problems, Sandi named the new class `Parts` which will be the parent of `Part`. `Parts` is now a wrapper that contains an array of `Part` objects.
 
 Instead of thinking of `Part` objects as instances, Sandi tells us to think of them as objects that play the role of `Part`.  "They don’t have to be a kind-of the Part class, they just have to act like one; that is, they must respond to name, description, and needs_spare." -pg. 172
 
@@ -42,7 +44,7 @@ With composition, method delegation doesn’t come for free like with inheritanc
 
 ##### Pros:
 
-- Covers RUE of our goal to be TRUE: reasonable, usable and exemplary
+- Covers RUE part of our goal to be TRUE: reasonable, usable and exemplary
 - Methods defined near the top of the heirarchy are spread easily over everything underneath making changes to behavior relatively easy and reasonable
 - Adding a new subclass doesn't require making a change to existing code thus making it usable
 - These classes are easily extendible setting an easy pattern to follow. This puts the e in exemplary.
@@ -59,7 +61,7 @@ irrevocably and by design, to the classes above them in the hierarchy." - pg. 18
 
 ##### Pros:
 
-- Covers the TRU of our goal to be TRUE: true, reasonable and usable.
+- Covers the TRU part of our goal to be TRUE: true, reasonable and usable.
 - Easy to understand (transparent)
 - Adding objects is easy as long asthey honor the given interface (reasonable)
 - Interchangeable components with "...a high tolerance for change." (usuable) - pg 188
