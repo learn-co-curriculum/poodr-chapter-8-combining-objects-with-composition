@@ -14,7 +14,7 @@ Before we dive in further, how does the concept of composition feel so far? Have
 
 ### 8.2 Composing the Parts Object
 
-The way you name your classes is important. To prevent communication problems, Sandi named the new class `Parts` which will be the parent of `Part`. `Parts` is now a wrapper that contains an array of `Part` objects.
+How you name your classes is important. To prevent communication problems, Sandi named the new class `Parts` which will be the parent of `Part`. `Parts` is now a wrapper that contains an array of `Part` objects.
 
 Instead of thinking of `Part` objects as instances, Sandi tells us to think of them as objects that play the role of `Part`.  "They don’t have to be a kind-of the Part class, they just have to act like one; that is, they must respond to name, description, and needs_spare." -pg. 172
 
